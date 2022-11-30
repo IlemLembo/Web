@@ -1,0 +1,166 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Consortium d'artistes Lamba &copy;</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+    <link href={% static "css/all.min.css" %} rel="stylesheet" />
+	<link href={% static "css/templatemo-style.css" %} rel="stylesheet" />
+</head>
+<!--
+
+Simple House
+
+https://templatemo.com/tm-539-simple-house
+
+-->
+<body> 
+
+	<div class="container">
+	<!-- Top box -->
+		<!-- Logo & Site Name -->
+		<div class="placeholder">
+			<div class="parallax-window" data-parallax="scroll" data-image-src={% static "img/lointain.jpg "%}>
+				<div class="tm-header">
+					<div class="row tm-header-inner">
+						<div class="col-md-6 col-12">
+							<img src={% static "img/simple-house-logo.png" %} alt="Logo" class="tm-site-logo" /> 
+							<div class="tm-site-text-box">
+								<h1 class="tm-site-title">Consortium d'artistes Lamba &copy;</h1>
+								<h6 class="tm-site-description">news</h6>	
+							</div>
+						</div>
+						<nav class="col-md-6 col-12 tm-nav">
+							<ul class="tm-nav-ul">
+								<li class="tm-nav-li"><a href="#" class="tm-nav-link">Contact</a></li>
+								<li class="tm-nav-li"><a href="{% url 'about' %}" class="tm-nav-link">About</a></li>
+
+                                {% if user.is_authenticated %}
+								    <li class="tm-nav-li"><a href={% url 'logout' %} class="tm-nav-link">Logout</a></li>
+                                {% else %}
+								    <li class="tm-nav-li"><a href="{% url 'login' %}" class="tm-nav-link">Login</a></li>
+                                {% endif %}
+							</ul>
+						</nav>	
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<header class="row tm-welcome-section">
+				<h2 class="col-12 text-center tm-section-title">A propos de nous ?</h2>
+				<p class="col-12 text-center">Nous avons créer cette plateforme pour promouvoir les chansons de nos talentueux artistes Lamba. Découvrez avec nous des chansons dans votre langue maternelle. Vous êtes vous même artiste? Vous pourrez vous-même publier votre musique et être remunéré à chaque visiteur.</p>
+			</header>
+
+			<div class="tm-container-inner tm-persons">
+				<div class="row" style="align-items: center; display: inline-flex;">
+					
+
+					<article class="col-lg-6" >
+						<figure class="tm-person">
+							
+							<figcaption class="tm-person-description">
+								<img src={% static 'img/bright.jpg' %} alt="Image" class="img-fluid tm-person-img" style="position: relative;" />
+								<h4 class="tm-person-name">LEMBO Bright,</h4>
+								<p class="tm-person-title">Developpeuse Web, application mobile,</p>
+								<p class="tm-person-about">###################</p>
+								<div>
+									<p><strong>brightlembo@gmail.com<strong><i class="fab fa-gmail"></i></p>
+										<p>
+									<a href="https://brightlemboportfolio.000webhostapp.com/" style="text-decoration: none;">Personal portfolio</a></p>
+								</div>
+							</figcaption>
+							
+							
+						</figure>
+					</article>
+					<article class="col-lg-6" style="margin-left: 50%; margin-bottom: 100px; align-items: center; ">
+
+							<figure class="tm-person">
+							
+								<figcaption class="tm-person-description" style="margin-left: -25%;">
+									<h4 class="tm-person-name">LEMBO Ilem Nelson,</h4>
+									<p class="tm-person-title">Administrateur Réseaux et Système, Developpeur à ses temps perdus,</p>
+									<p class="tm-person-about">CCNA et AWS-Cloud Pactitionner,</p>
+									<div>
+										<!--<a href="https://fb.com" class="tm-social-link"><i class="fab fa-facebook tm-social-icon"></i></a>-->
+										<p><strong>lemboilem@gmail.com<strong><i class="fab fa-gmail"></i></p>
+									</div>
+								</figcaption>
+								<img src={% static 'img/ilem.jpg' %} alt="Image" class="img-fluid tm-person-img" style="height: 150vh; width: 100vw; float: inline; position: relative;"/>
+							</figure>
+							
+							
+
+							
+							
+
+					</article>
+					
+					
+				</div>
+			</div>
+			<div class="tm-container-inner tm-featured-image">
+				<div class="row">
+					<div class="col-12">
+						<div class="placeholder-2">
+							<div class="parallax-window-2" data-parallax="scroll" data-image-src={% static "img/bach.jpg" %}></div>		
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tm-container-inner tm-features">
+				<div class="row">
+					<div class="col-lg-4">
+						<div class="tm-feature">
+							<i class="fas fa-4x fa-pepper-hot tm-feature-icon"></i>
+							<p class="tm-feature-description">Donec sed orci fermentum, convallis lacus id, tempus elit. Sed eu neque accumsan, porttitor arcu a, interdum est. Donec in risus eu ante.</p>
+							<a href="index.html" class="tm-btn tm-btn-primary">Read More</a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="tm-feature">
+							<i class="fas fa-4x fa-seedling tm-feature-icon"></i>
+							<p class="tm-feature-description">Maecenas pretium rutrum molestie. Duis dignissim egestas turpis sit. Nam sed suscipit odio. Morbi in dolor finibus, consequat nisl eget.</p>
+							<a href="index.html" class="tm-btn tm-btn-success">Read More</a>
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="tm-feature">
+							<i class="fas fa-4x fa-cocktail tm-feature-icon"></i>
+							<p class="tm-feature-description">Morbi in dolor finibus, consequat nisl eget, pretium nunc. Maecenas pretium rutrum molestie. Duis dignissim egestas turpis sit.</p>
+							<a href="index.html" class="tm-btn tm-btn-danger">Read More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tm-container-inner tm-history">
+				<div class="row">
+					<div class="col-12">
+						<div class="tm-history-inner">
+							<img src="img/about-06.jpg" alt="Image" class="img-fluid tm-history-img" />
+							<div class="tm-history-text"> 
+								<h4 class="tm-history-title">History of our restaurant</h4>
+								<p class="tm-mb-p">Sed ligula risus, interdum aliquet imperdiet sit amet, auctor sit amet justo. Maecenas posuere lorem id augue interdum vehicula. Praesent sed leo eget libero ultricies congue.</p>
+								<p>Redistributing this template as a downloadable ZIP file on any template collection site is strictly prohibited. You will need to <a href="https://templatemo.com/contact">contact TemplateMo</a> for additional permissions about our templates. Thank you.</p>
+							</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="tm-footer text-center">
+			<p>Consortium d'artistes Lamba &copy;</p>
+		</footer>
+	</div>
+	<script src='{% static "scripts/jquery.min.js" %}'></script>
+	<script src='{% static "scripts/parallax.min.js" %}'></script>
+	<script src="https://kit.fontawesome.com/2d211be41f.js" crossorigin="anonymous"></script>
+</body>
+</html>

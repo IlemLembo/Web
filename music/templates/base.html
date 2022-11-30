@@ -1,0 +1,67 @@
+{% load static %}
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consortium d'artistes Lamba &copy;</title>
+    <link rel="stylesheet" href="{% static 'css/styles2.css' %}">
+    <script src="https://kit.fontawesome.com/2d211be41f.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="main_box">
+        <input type="checkbox"  id="check">
+        <div class="btn_one">
+            <label for="check">
+                <i class="fas fa-bars"></i>
+            </label>
+
+
+        </div>
+        <div class="sidebar_menu">
+            <div class="logo">
+                {% if user.is_authenticated %}
+                    <strong>{{ user.username }}</strong>
+                {% endif %}
+            </div>
+            <div class="btn_two">
+                <label for="check">
+                    <i class="fas fa-times"></i>
+                </label>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#"><i class="fa-duotone fa-waveform"></i>
+                        Nouveautés</a></li>
+                    <li><a href="#"><i class="fas fa-qrcode"></i>
+                        Tableau de Bord</a></li>
+                    <li><a href={% url 'Upload_Audiofile' %}><i class="fa-duotone fa-arrow-up-from-bracket"></i>
+                        Publier</a></li>
+                    <li><a href="#"><i class="fa-duotone fa-gear"></i>
+                        Paramêtres</a></li>
+                    <li><a href="#"><i class="fas fa-phone-volume"></i>
+                        Contact</a></li>
+                    <li><a href="about"><i class="fas fa-question-circle"></i>
+                        A propos</a></li>
+                    <li><a href="logout"><i class="fa-duotone fa-right-from-bracket"></i>
+                        Se déconnecter</a></li>
+                </ul>
+            </div>
+            <div class="social_media">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        {% block content %}
+
+        {% endblock content %}
+        
+    </div>
+
+
+</body>
+</html>
