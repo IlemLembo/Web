@@ -53,7 +53,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'webapp.urls'
-TEMPLATES_DIR = [os.path.join(BASE_DIR, 'authentication/templates/'), os.path.join(BASE_DIR, 'music/templates/')]
+TEMPLATES_DIR = [os.path.join(BASE_DIR, 'authentication/templates/'), os.path.join(BASE_DIR, 'music/templates/'),]
 
 TEMPLATES = [
     {
